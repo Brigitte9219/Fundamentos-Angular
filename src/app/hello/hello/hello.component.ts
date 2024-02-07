@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -7,11 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HelloComponent {
 
-  name:string;
+  @Input() nombre?:string;
+  @Input() apellido:string | undefined;
 
   constructor(){
-    this.name ='Maritza';
-    console.log(this.name);
+
   }
 
 }
