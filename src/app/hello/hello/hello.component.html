@@ -3,4 +3,6 @@
   <button (click)="addName()">Añadir nombre</button>
 </div>
 
-<p (click)="hagaClick()">Hello {{nombre}} {{apellido}} !</p>
+<p *ngFor="let item of listaNombres; index as i" (click)="hagaClick()">
+  {{i}} - Hello {{item}} {{apellido}} !
+</p>
