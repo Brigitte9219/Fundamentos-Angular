@@ -9,5 +9,5 @@
 </div>
 
 <p *ngFor="let item of listaNombres; index as i" (click)="hagaClick()">
-  {{i}} - Hello {{item}} {{apellido}} !
+  {{i}} - Hello {{item | slice:0:1 | uppercase}} {{item | slice:1 | lowercase}}{{apellido}} !
 </p>
