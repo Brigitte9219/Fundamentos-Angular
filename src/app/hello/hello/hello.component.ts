@@ -13,10 +13,24 @@ export class HelloComponent {
 
   @Output() saludo:EventEmitter<string> = new EventEmitter<string>();
 
+  listaNombres: Array<string> = [];
+  ingreseNombre: string='Jhon';
+
   constructor(){}
 
   hagaClick(){
     this.saludo.emit('Hola!');
+  }
+
+  addName(){
+    this.listaNombres.push(this.ingreseNombre);
+    this.ingreseNombre = '';
+    console.log(this.listaNombres);
+  }
+
+  actualizarInputName(event: any){
+    this.ingreseNombre = event.target.value;
+    console.log(this.ingreseNombre);
   }
 
 }
