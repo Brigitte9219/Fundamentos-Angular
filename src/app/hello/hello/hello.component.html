@@ -1,6 +1,11 @@
-<div *ngIf="listaNombres.length < 5" class="div">
+<div [ngSwitch]="listaNombres.length" class="div">
+  <div *ngSwitchDefault="" >
   <input type="text" [(ngModel)]="ingreseNombre">
   <button (click)="addName()">Añadir nombre</button>
+</div>
+<div *ngSwitchCase="5" class="div">
+  <p>No se reciben más nombres</p>
+</div>
 </div>
 
 <p *ngFor="let item of listaNombres; index as i" (click)="hagaClick()">
