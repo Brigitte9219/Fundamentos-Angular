@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello/hello.component';
 import { FormsModule } from '@angular/forms';
+import { UpperCapitalPipe } from './hello/upper-capital.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    UpperCapitalPipe
   ],
   imports: [
     BrowserModule,
