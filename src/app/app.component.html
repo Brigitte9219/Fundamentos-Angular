@@ -1,6 +1,11 @@
 <h1>Fundamentos</h1>
 
+<div class="div">
+  Escribiendo '{{myHelloComponent.ingreseNombre}}' en HelloComponent
+</div>
+<br>
 <app-hello
+#myHelloComponent
 [nombre]="myName"
 apellido="Salamanca"
 (saludo)="saludar($event)">
