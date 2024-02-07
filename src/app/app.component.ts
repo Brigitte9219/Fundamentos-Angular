@@ -7,11 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fundamentos';
+  titleStyles?:{};
+  counter = 0;
 
   myName:string ='Brigitte';
 
   saludar(message: string){
     console.log(message);
+    this.counter++;
+    this.updatetitleStyles();
+  }
+
+  updatetitleStyles(){
+    this.titleStyles = {
+      'margin-top':'40px',
+      'color': this.counter < 3 ? 'green' : 'goldenrod'
+    }
   }
 
   updateNameClasses(name:string){

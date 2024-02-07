@@ -1,5 +1,4 @@
-<h1 [style.color]="myHelloComponent.listaNombres.length > 0 ? 'red' : 'black'"
-  [style.font-size.%]="myHelloComponent.listaNombres.length > 0 ? 200 : 150">Fundamentos</h1>
+<h1 [ngStyle]="titleStyles" >Fundamentos</h1>
 
 <div [class.hidden]="myHelloComponent.ingreseNombre.length == 0">
   Escribiendo <span [ngClass]="updateNameClasses(myHelloComponent.ingreseNombre)">'{{myHelloComponent.ingreseNombre}}'</span> en HelloComponent
