@@ -1,5 +1,5 @@
 <div class="div">
-  <input type="text" [value]="ingreseNombre" (keyup)="actualizarInputName($event)">
+  <input type="text" [(ngModel)]="ingreseNombre">
   <button (click)="addName()">Añadir nombre</button>
 </div>
 

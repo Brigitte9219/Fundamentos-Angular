@@ -14,7 +14,7 @@ export class HelloComponent {
   @Output() saludo:EventEmitter<string> = new EventEmitter<string>();
 
   listaNombres: Array<string> = [];
-  ingreseNombre: string='Jhon';
+  ingreseNombre: string='';
 
   constructor(){}
 
@@ -28,9 +28,6 @@ export class HelloComponent {
     console.log(this.listaNombres);
   }
 
-  actualizarInputName(event: any){
-    this.ingreseNombre = event.target.value;
-    console.log(this.ingreseNombre);
-  }
+
 
 }
