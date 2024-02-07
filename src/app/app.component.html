@@ -1,3 +1,7 @@
 <h1>Fundamentos</h1>
 
-<app-hello [nombre]="myName" apellido="Salamanca"></app-hello>
+<app-hello
+[nombre]="myName"
+apellido="Salamanca"
+(saludo)="saludar($event)">
+</app-hello>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+import { Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -11,8 +11,12 @@ export class HelloComponent {
   @Input() nombre?:string;
   @Input() apellido:string | undefined;
 
-  constructor(){
+  @Output() saludo:EventEmitter<string> = new EventEmitter<string>();
 
+  constructor(){}
+
+  hagaClick(){
+    this.saludo.emit('Hola!');
   }
 
 }

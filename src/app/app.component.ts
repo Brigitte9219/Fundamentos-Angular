@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'fundamentos';
 
   myName:string ='Brigitte';
+
+  saludar(message: string){
+    console.log(message);
+  }
 }
